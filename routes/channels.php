@@ -11,6 +11,9 @@
 |
 */
 
-Broadcast::channel('App.User.1', function () {
-    return ['msj'=>'prueba de conexion', 'true'=>true];
+Broadcast::channel('test-channel', function () {
+    return true;
+});
+Broadcast::channel('test-channel-2',function () {
+    return true;
 });

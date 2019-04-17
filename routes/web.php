@@ -18,3 +18,4 @@ Route::get('/pod', 'PodcastController@store');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('notify/index', 'NotificationController@index');

@@ -21,9 +21,8 @@
         },
         methods: {
             stenForBroadcast() {
-                Echo.join('App.User.' + 1)
+                Echo.join('test-channel')
                 .here((users) => {
-                  
                     this.users_viewing = users;
                     this.$forceUpdate();
                 })
@@ -38,8 +37,11 @@
                         this.removeViewingUser(user);
                         this.$forceUpdate();
                 })
-                .listen('ProcessPodcast', (e) => {
-                    cosole.log(e);
+                .notification((noti) => {
+                    console.log(noti);
+                })
+                .listen('test-channel', (e) => {
+                    console.log(e);
                 });
             },
         },

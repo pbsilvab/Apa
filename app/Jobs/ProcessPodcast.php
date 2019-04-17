@@ -8,6 +8,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Redis;
 
 class ProcessPodcast implements ShouldQueue
 {
@@ -31,7 +32,7 @@ class ProcessPodcast implements ShouldQueue
      */
     public function handle(AudioProcessor $processor)
     {
-        return ["email send successfully"];
+        Redis::publish('test-channel', json_encode(['foo' => 'bar']));
         
     }
 }

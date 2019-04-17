@@ -1866,8 +1866,7 @@ __webpack_require__.r(__webpack_exports__);
     stenForBroadcast: function stenForBroadcast() {
       var _this = this;
 
-      Echo.join('App.User.' + 1).here(function (users) {
-        console.log(12123);
+      Echo.join('test-channel').here(function (users) {
         _this.users_viewing = users;
 
         _this.$forceUpdate();
@@ -1881,8 +1880,10 @@ __webpack_require__.r(__webpack_exports__);
         _this.removeViewingUser(user);
 
         _this.$forceUpdate();
-      }).listen('MessagePushed', function (e) {
-        cosole.log(e);
+      }).notification(function (noti) {
+        console.log(noti);
+      }).listen('test-channel', function (e) {
+        console.log(e);
       });
     }
   }
