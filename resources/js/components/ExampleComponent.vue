@@ -21,22 +21,17 @@
         },
         methods: {
             stenForBroadcast() {
-                Echo.join('App.User.' + 1)
+                Echo.join("App.User.1")
                 .here((users) => {
                   
-                    this.users_viewing = users;
-                    this.$forceUpdate();
+                  console.log(users);
+                  
                 })
                 .joining((user) => {
-                    if (this.checkIfUserAlreadyViewingSurvey(user)) {
-                        this.users_viewing.push(user);
-                        this.$forceUpdate();
-                    }
+                    console.log(users);
                 })
                 .leaving((user) => {
-
-                        this.removeViewingUser(user);
-                        this.$forceUpdate();
+                    console.log(users);
                 })
                 .listen('ProcessPodcast', (e) => {
                     cosole.log(e);

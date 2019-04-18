@@ -1864,24 +1864,13 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     stenForBroadcast: function stenForBroadcast() {
-      var _this = this;
-
-      Echo.join('App.User.' + 1).here(function (users) {
-        console.log(12123);
-        _this.users_viewing = users;
-
-        _this.$forceUpdate();
+      Echo.join("App.User.1").here(function (users) {
+        console.log(users);
       }).joining(function (user) {
-        if (_this.checkIfUserAlreadyViewingSurvey(user)) {
-          _this.users_viewing.push(user);
-
-          _this.$forceUpdate();
-        }
+        console.log(users);
       }).leaving(function (user) {
-        _this.removeViewingUser(user);
-
-        _this.$forceUpdate();
-      }).listen('MessagePushed', function (e) {
+        console.log(users);
+      }).listen('ProcessPodcast', function (e) {
         cosole.log(e);
       });
     }
@@ -9000,7 +8989,7 @@ function load() {
 
   // If debug isn't set in LS, and we're in Electron, try to load $DEBUG
   if (!r && typeof process !== 'undefined' && 'env' in process) {
-    r = Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}).DEBUG;
+    r = Object({"MIX_PUSHER_APP_CLUSTER":"mt1","MIX_PUSHER_APP_KEY":"","NODE_ENV":"development"}).DEBUG;
   }
 
   return r;
@@ -59151,8 +59140,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/html/ApaProject/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /var/www/html/ApaProject/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\Apa\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\Apa\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ }),
