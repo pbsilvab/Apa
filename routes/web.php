@@ -18,3 +18,9 @@ Route::get('/pod', 'PodcastController@store');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('notify/index', 'NotificationController@index');
+Route::get('contacts', 'NotificationController@contacts');
+Route::get('conversation/{id}', 'NotificationController@messages');
+Route::post('conversation/send', 'NotificationController@savemessages');
+
+

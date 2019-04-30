@@ -11,6 +11,6 @@
 |
 */
 
-Broadcast::channel('App.User.1', function () {
-    return ['msj'=>'prueba de conexion', 'true'=>true];
+Broadcast::channel('messages.{id}', function ($user, $id){
+        return $user->id == (int) $id;
 });

@@ -9,19 +9,22 @@ use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
-class MessagePushed
+use App\Message;
+
+class MessagePushed implements ShouldBroadcast 
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
-
+    public $data;
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Message $message)
     {
-        //
+        $this->data = $message;
     }
 
     /**
@@ -29,8 +32,17 @@ class MessagePushed
      *
      * @return \Illuminate\Broadcasting\Channel|array
      */
-    public function broadcastOn()
-    {
-        return new PrivateChannel('App.User.1');
+    public function broadcastOn(){
+
+         return new PrivateChannel('messages.' . $this->data->to);
+
+    }
+
+     public function broadcastWith(){
+
+        $this->data->load('fromContact');
+        
+         return ['message'=>$this->data];
+
     }
 }
