@@ -10,7 +10,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="{{asset('public/css/app.css')}}">
-        <link rel="stylesheet" href="{{asset('public/css/style.css')}}">
+        <link rel="stylesheet" href="{{asset('css/style.css')}}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
             
         <!-- Styles -->
@@ -38,20 +38,20 @@
                     </div>
                     <div class="col-md-6">
                         <div class="panel">
-                            <h4 class="text-center">Web Developer</h4>
-                            <h5>Frontend</h5>
+                            <h4 class="text-center"><strong> Web Developer</strong></h4>
+                            <h5><strong> Frontend </strong></h5>
                             <ul>
                                 <li>Angular</li>
                                 <li>VueJs</li>
                             </ul>
-                            <h5>Backend</h5>
+                            <h5><strong> Backend</strong></h5>
                             <ul>
                                 <li>Laravel</li>
                                 <li>Go</li>
                             </ul>
 
                             <hr>
-                            <h4 class="text-center">Web Services</h4>
+                            <h4 class="text-center"><strong> Web Services</strong></h4>
                             <ul>
                                 <li>Desarrollo de paginas web</li>
                                 <li>Desarrollo de Apps Moviles</li>
@@ -71,8 +71,9 @@
             </div>
         </div>            
         </div>
-        <div class="wraper2">
-            <div class="container">
+        <!--style="background-image:url('{{asset('resources/welcome/net.png')}}');"-->
+        <div class="wraper2" >
+            <div class="container" > 
                 <div class="row">
                     <div class="col-md-6">
                          <div class="block text-center">
@@ -82,7 +83,7 @@
                     </div>
                     <div class="col-md-6">
 
-                        </div>
+                    </div>
                 </div>
             </div>
         </div>
