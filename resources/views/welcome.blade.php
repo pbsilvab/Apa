@@ -79,7 +79,9 @@
                     @endauth
                 </div>
             @endif
-            <h1>Maria Francesca <i class="fab fa-accusoft"></i></h1>
+            <img src="https://instagram.faep8-1.fna.fbcdn.net/vp/b9d258978e725ae8a9fbf98fbe795c7e/5D66B3D1/t51.2885-19/s150x150/49546099_2241976666122750_4754697301123923968_n.jpg?_nc_ht=instagram.faep8-1.fna.fbcdn.net" style="border-radius:50%;"  alt="">
+            <h1>&nbsp; Maria Francesca <i class="fa fa-heart"></i></h1>
+            
         </div>
     </body>
     <script src="{{mix('js/app.js')}}"></script>
