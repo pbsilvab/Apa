@@ -10,13 +10,6 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="{{mix('css/app.css')}}">
-
-        
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
             
         <!-- Styles -->
         <style>
@@ -52,9 +45,12 @@
             .content {
                 text-align: center;
             }
+            .text-center{
+                 text-align: center;
+            }
 
             .title {
-                font-size: 84px;
+                font-size: 48px;
             }
 
             .links > a {
@@ -87,7 +83,7 @@
                     @endauth
                 </div>
             @endif
-            <h1 class="">&nbsp; Pedro Silva </h1>
+            <h1 class="title">&nbsp; Pedro Silva </h1>
         </div>
             <div class="block text-center">
                 <h4>COMING SOON</h4>
