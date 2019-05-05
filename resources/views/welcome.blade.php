@@ -10,6 +10,14 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="{{mix('css/app.css')}}">
+
+        
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
         <!-- Styles -->
         <style>
             html, body {
@@ -22,7 +30,7 @@
             }
 
             .full-height {
-                height: 100vh;
+                height:50vh;
             }
 
             .flex-center {
@@ -79,10 +87,11 @@
                     @endauth
                 </div>
             @endif
-            <img src="https://instagram.faep8-1.fna.fbcdn.net/vp/b9d258978e725ae8a9fbf98fbe795c7e/5D66B3D1/t51.2885-19/s150x150/49546099_2241976666122750_4754697301123923968_n.jpg?_nc_ht=instagram.faep8-1.fna.fbcdn.net" style="border-radius:50%;"  alt="">
-            <h1>&nbsp; Maria Francesca <i class="fa fa-heart" style="color: #1cdf8e;"></i></h1>
-            
+            <h1 class="">&nbsp; Pedro Silva </h1>
         </div>
+            <div class="block text-center">
+                <h4>COMING SOON</h4>
+            </div>
     </body>
     <script src="{{mix('js/app.js')}}"></script>
 </html>
