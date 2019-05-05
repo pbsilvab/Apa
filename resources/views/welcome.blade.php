@@ -9,7 +9,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link rel="stylesheet" href="{{mix('public/css/app.css')}}">
+        <link rel="stylesheet" href="{{asset('public/css/app.css')}}">
             
         <!-- Styles -->
         <style>
@@ -89,5 +89,5 @@
                 <h4>COMING SOON</h4>
             </div>
     </body>
-    <script src="{{mix('js/app.js')}}"></script>
+    <script src="{{asset('public/js/app.js')}}"></script>
 </html>
