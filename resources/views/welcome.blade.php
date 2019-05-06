@@ -64,7 +64,6 @@
                             <h5><strong> Backend</strong></h5>
                             <ul>
                                 <li>Laravel</li>
-                                <li>Go</li>
                             </ul>
 
                             <hr>
