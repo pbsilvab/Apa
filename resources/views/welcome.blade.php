@@ -35,7 +35,23 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mid-panel veh40">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mid-panel veh40">
+                                    <h4 class="text-center"><strong> Estudios</strong></h4>
+                                    <ul>
+                                        <li>Titulo Bachiller en Ciencias</li>
+                                        <li>Titulo de Ingenieria de Sistemas</li>
+
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="panel">
@@ -77,9 +93,34 @@
             <div class="container" > 
                 <div class="row">
                     <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mid-panel veh25">
+                                    <h4 class="text-center"><strong> Experiencias</strong></h4>
+                                    <ul>
+                                        <li>Lider de desarrollo para Pinttosoft (Ve)</li>
+                                        <li>Analista de Sistemas para EMA Servicios (Ar)</li>
+                                        <li>Soporte Tecnico para Ecomexperts (Ar)</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mid-panel veh25">
+                                    <h4 class="text-center"><strong> Skills</strong></h4>
+                                    <ul>
+                                        <li>Php</li>
+                                        <li>Node</li>
+                                        <li>Js and Ts</li>
+                                        <li>HTML</li>
+                                        <li>CSS, SCSS, SASS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                          <div class="block text-center">
-                             <h1 class="title">&nbsp; Pedro Silva </h1>
-                             <h5 class="subtitle">&nbsp; COMING SOON</h5>
+                             <br>
+                             <h5 class="subtitle">&nbsp; <strong>  COMING SOON </strong></h5>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -88,6 +129,7 @@
                 </div>
             </div>
         </div>
+        
     </body>
     <script src="{{asset('public/js/app.js')}}"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
