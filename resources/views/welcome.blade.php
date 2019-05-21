@@ -31,103 +31,137 @@
         </style>
     </head>
     <body>
-        <div class="wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="mid-panel veh40">
+        <section id="first_segment">
+            <div class="wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mid-panel veh40">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mid-panel veh40">
-                                    <h4 class="text-center"><strong> Estudios</strong></h4>
-                                    <ul>
-                                        <li>Titulo Bachiller en Ciencias</li>
-                                        <li>Titulo de Ingenieria de Sistemas</li>
+                                <div class="col-md-6">
+                                    <div class="mid-panel veh40">
+                                        <h4 class="text-center"><strong> Estudios</strong></h4>
+                                        <ul>
+                                            <li>Titulo Bachiller en Ciencias</li>
+                                            <li>Titulo de Ingenieria de Sistemas</li>
 
-                                    </ul>
-                                    
+                                        </ul>
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="panel">
+                                <h4 class="text-center"><strong> Web Developer</strong></h4>
+                                <h5><strong> Frontend </strong></h5>
+                                <ul>
+                                    <li>Angular</li>
+                                    <li>VueJs</li>
+                                </ul>
+                                <h5><strong> Backend</strong></h5>
+                                <ul>
+                                    <li>Laravel</li>
+                                </ul>
+
+                                <hr>
+                                <h4 class="text-center"><strong> Web Services</strong></h4>
+                                <ul>
+                                    <li>Desarrollo de paginas web</li>
+                                    <li>Desarrollo de Apps Moviles</li>
+                                </ul>
+
+                                
+
+                                <h3 class="social-icons text-center">
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-facebook-square"></i>
+                                    <i class="fa fa-mail-bulk"></i>
+                                </h3>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="panel">
-                            <h4 class="text-center"><strong> Web Developer</strong></h4>
-                            <h5><strong> Frontend </strong></h5>
-                            <ul>
-                                <li>Angular</li>
-                                <li>VueJs</li>
-                            </ul>
-                            <h5><strong> Backend</strong></h5>
-                            <ul>
-                                <li>Laravel</li>
-                            </ul>
+                </div>
+            </div>            
+            </div>
+            <!--style="background-image:url('{{asset('resources/welcome/net.png')}}');"-->
+            <div class="wraper2" >
+                <div class="container" > 
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mid-panel veh25">
+                                        <h4 class="text-center"><strong> Experiencias</strong></h4>
+                                        <ul>
+                                            <li>Lider de desarrollo para Pinttosoft (Ve)</li>
+                                            <li>Analista de Sistemas para EMA Servicios (Ar)</li>
+                                            <li>Soporte Tecnico para Ecomexperts (Ar)</li>
 
-                            <hr>
-                            <h4 class="text-center"><strong> Web Services</strong></h4>
-                            <ul>
-                                <li>Desarrollo de paginas web</li>
-                                <li>Desarrollo de Apps Moviles</li>
-                            </ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mid-panel veh25">
+                                        <h4 class="text-center"><strong> Skills</strong></h4>
+                                        <ul>
+                                            <li>Php</li>
+                                            <li>Node</li>
+                                            <li>Js and Ts</li>
+                                            <li>HTML</li>
+                                            <li>CSS, SCSS, SASS</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
 
-                            
-
-                            <h3 class="social-icons text-center">
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-instagram"></i>
-                                <i class="fab fa-facebook-square"></i>
-                                <i class="fa fa-mail-bulk"></i>
-                            </h3>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>            
-        </div>
-        <!--style="background-image:url('{{asset('resources/welcome/net.png')}}');"-->
-        <div class="wraper2" >
-            <div class="container" > 
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="mid-panel veh25">
-                                    <h4 class="text-center"><strong> Experiencias</strong></h4>
-                                    <ul>
-                                        <li>Lider de desarrollo para Pinttosoft (Ve)</li>
-                                        <li>Analista de Sistemas para EMA Servicios (Ar)</li>
-                                        <li>Soporte Tecnico para Ecomexperts (Ar)</li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mid-panel veh25">
-                                    <h4 class="text-center"><strong> Skills</strong></h4>
-                                    <ul>
-                                        <li>Php</li>
-                                        <li>Node</li>
-                                        <li>Js and Ts</li>
-                                        <li>HTML</li>
-                                        <li>CSS, SCSS, SASS</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                         <div class="block text-center">
-                             <br>
-                             <h5 class="subtitle">&nbsp; <strong>  COMING SOON </strong></h5>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-
-                    </div>
-                </div>
-            </div>
-        </div>
+            <a href="#second_secment" style="color:#282828;">
+                <h3 class="text-center"> <i class="fa fa-angle-down"></i></h3>
+            </a>
+        </section>
+        <section id="second_secment">
+                    <a href="#first_segment" style="color:#282828;">
+                        <h3 class="text-center"> <i class="fa fa-angle-up"></i></h3>
+                    </a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </section>
         
     </body>
     <script src="{{asset('public/js/app.js')}}"></script>
@@ -137,11 +171,24 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139601948-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'UA-139601948-1');
+        gtag('config', 'UA-139601948-1');
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            
+            $('.wrapper').css('heigth', '5vh');
+
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 
 </html>
