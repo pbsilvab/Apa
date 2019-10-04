@@ -11,11 +11,8 @@
 |
 */
 
-Broadcast::channel('test-channel', function () {
-    return true;
-});
-Broadcast::channel('test-channel-2',function () {
-    return true;
+Broadcast::channel('messages.{id}', function ($user, $id){
+        return $user->id == (int) $id;
 });
 Broadcast::channel('User.1', function () {
     return true;

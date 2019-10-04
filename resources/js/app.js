@@ -30,5 +30,5 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
-    render: h => h('example-component')
+   // render: h => h('example-component')
 });

@@ -6,12 +6,15 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use Illuminate\Queue\SerializesModels;
+use App\Events\MessagePushed;
 use App\User;
-use Notifications\Messages\BroadcastMessage;
+use Illuminate\Notifications\Messages\BroadcastMessage;
 
-class NewMessage extends Notification
+class NewMessage extends Notification implements ShouldQueue, ShouldBroadcast
 {
-    use Queueable;
+    use Queueable, SerializesModels;
     public $fromUser;
 
     /**
@@ -32,7 +35,11 @@ class NewMessage extends Notification
      */
     public function via($notifiable)
     {
+<<<<<<< HEAD
         return ['mail', 'database'];
+=======
+        return ['mail', 'broadcast'];
+>>>>>>> c10aced8c74364cbd75b9b5d5e8129395a15d35c
     }
 
     /**
@@ -76,5 +83,22 @@ class NewMessage extends Notification
         }
 
         return $this->events->dispatch($event);
+    }
+    public function toDatabase($notifiable)
+    {
+        return [
+            'news_id' => $this->fromUser,
+        ];
+    }
+
+    /**
+     * Get the broadcastable representation of the notification.
+     *
+     * @param  mixed  $notifiable
+     * @return BroadcastMessage
+     */
+    public function toBroadcast($notifiable)
+    {
+        return new MessagePushed($notifiable);
     }
 }

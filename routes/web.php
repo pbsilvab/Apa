@@ -13,7 +13,7 @@ use App\Events\UserSignedUp;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('front.app');
 });
 Route::get('/pod', function(){
     event(new UserSignedUp('john doe'));
@@ -23,3 +23,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('notify/index', 'NotificationController@index');
+Route::get('contacts', 'NotificationController@contacts');
+Route::get('conversation/{id}', 'NotificationController@messages');
+Route::post('conversation/send', 'NotificationController@savemessages');
+
+

@@ -1,54 +1,92 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
-
-                    <div class="card-body">
-                        Yoou are logged in
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="chat-app">
+        <conversation :contacts="selectedContact" :messages="messages" @new="saveNewMessage" />    
+        <contactsList :contacts="contacts" @selected="startConversationWidth"/>
     </div>
 </template>
 
-<script>
-    export default {
-        mounted() {
-           this.stenForBroadcast();
-            Echo.private('test-channel')
-                .notification((notification) => {
-                    console.log(notification);
-                    
-            });
-        },
-        methods: {
-            stenForBroadcast() {
-                Echo.join('test-channel')
-                .here((users) => {
-                    this.users_viewing = users;
-                    this.$forceUpdate();
-                })
-                .joining((user) => {
-                    if (this.checkIfUserAlreadyViewingSurvey(user)) {
-                        this.users_viewing.push(user);
-                        this.$forceUpdate();
-                    }
-                })
-                .leaving((user) => {
+<script>   
+    import conversation from './conversation';
+    import contactsList from './contactsList';
 
-                        this.removeViewingUser(user);
-                        this.$forceUpdate();
+
+    export default {
+        props:{
+            user:{
+                type:Object,
+                required:true
+            }
+        },
+        data(){
+            return {
+                selectedContact:null,
+                messages:[],
+                contacts:[]
+            }
+        },
+        components:{
+            contactsList,
+            conversation
+        },
+        mounted() {
+            Echo.private(`messages.${this.user.id}`)
+                .listen('MessagePushed', (e)=>{
+                    this.handleIncoming(e.message);
+                } )
+
+
+            console.log(this.user);
+            axios.get('/contacts')
+                .then((resp)=>{
+                    console.log(resp);
+                    this.contacts = resp.data;
                 })
-                .notification((noti) => {
-                    console.log(noti);
-                })
-                .listen('test-channel', (e) => {
-                    console.log(e);
-                });
+       },
+        methods: {
+            startConversationWidth(contact){
+                this.updateUnreadCount(contact, true);
+
+                axios.get(`/conversation/${contact.id}`)
+                        .then((response)=>{
+                            this.messages = response.data;
+                            this.selectedContact = contact;
+                        });
             },
+            saveNewMessage(message){
+                //console.log(message);
+                this.messages.push(message);
+            },
+            handleIncoming(message){
+                if(this.selectedContact && message.from == this.selectedContact.id){
+                    this.saveNewMessage(message);
+                    return;
+                }
+               // console.log(contact);
+                this.updateUnreadCount(message.from_contact, false);
+            },
+            updateUnreadCount(contact, reset){
+
+                this.contacts = this.contacts.map((single) => {
+                    if(single.id != contact.id){
+                        return single;
+                    }
+
+                    if(reset){
+                        single.unread = 0;
+                    }else{
+                        single.unread += 1;
+                    }
+
+                    return single;
+                });
+
+            }
         },
     }
 </script>
+<style lang="scss" scoped>
+        .chat-app{
+            display: flex;
+        }
+
+</style>

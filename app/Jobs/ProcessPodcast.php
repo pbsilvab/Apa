@@ -32,7 +32,9 @@ class ProcessPodcast implements ShouldQueue
      */
     public function handle(AudioProcessor $processor)
     {
-        Redis::publish('test-channel', json_encode(['foo' => 'bar']));
+
+        $data = json_encode(['mes'=>'mendasje']);
+        return Redis::publish('App.User.1', json_encode(array('event' => 'Podcast', 'data' => $data)));
         
     }
 }

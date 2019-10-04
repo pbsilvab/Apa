@@ -1,0 +1,71 @@
+.veh40{
+    height: 40vh;
+}
+.veh25{
+    height: 30vh;
+
+}
+
+.wrapper{
+    background-color: #F21616;
+    height: 50vh;
+    background-position: fixed;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75)
+}
+.wraper2{
+    height: 45vh;
+    background-repeat:no-repeat;     
+}
+.mid-panel{
+    background-color: #fff;
+    margin-top: 40px;
+    padding: 15px;
+     -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+.title{
+    color: #260108;
+}
+.subtitle{
+    color: #8C141E;
+}
+.social-icons{
+    color:#260108;
+    padding: 15px;
+}
+.social-icons i {
+    margin: 10px;
+}
+.panel{
+    background: #fff;
+    padding: 15px;
+    border-radius: 3px;
+    height: 80vh;
+    margin: 40px;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+/* Color Theme Swatches in Hex */
+.RoadTrip-guatemala-1-hex { color: #8C141E; }
+.RoadTrip-guatemala-2-hex { color: #260108; }
+.RoadTrip-guatemala-3-hex { color: #223F59; }
+.RoadTrip-guatemala-4-hex { color: #F21616; }
+.RoadTrip-guatemala-5-hex { color: #F22E2E; }
+
+/* Color Theme Swatches in RGBA */
+.RoadTrip-guatemala-1-rgba { color: rgba(140, 19, 29, 1); }
+.RoadTrip-guatemala-2-rgba { color: rgba(38, 0, 7, 1); }
+.RoadTrip-guatemala-3-rgba { color: rgba(33, 63, 89, 1); }
+.RoadTrip-guatemala-4-rgba { color: rgba(242, 21, 21, 1); }
+.RoadTrip-guatemala-5-rgba { color: rgba(242, 46, 46, 1); }
+
+/* Color Theme Swatches in HSLA */
+.RoadTrip-guatemala-1-hsla { color: hsla(354, 75, 31, 1); }
+.RoadTrip-guatemala-2-hsla { color: hsla(348, 96, 7, 1); }
+.RoadTrip-guatemala-3-hsla { color: hsla(208, 44, 24, 1); }
+.RoadTrip-guatemala-4-hsla { color: hsla(0, 89, 51, 1); }
+.RoadTrip-guatemala-5-hsla { color: hsla(0, 88, 56, 1); }

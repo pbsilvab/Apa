@@ -7,6 +7,6 @@
     </div>
 @endif
 <div class="container" id="app">
-    
+    <example-component :user="{{Auth::user()}}"></example-component>
 </div>
 @endsection
