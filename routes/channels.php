@@ -17,3 +17,6 @@ Broadcast::channel('test-channel', function () {
 Broadcast::channel('test-channel-2',function () {
     return true;
 });
+Broadcast::channel('User.1', function () {
+    return true;
+});

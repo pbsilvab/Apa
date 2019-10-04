@@ -1861,6 +1861,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     this.stenForBroadcast();
+    Echo["private"]('User.1').notification(function (notification) {
+      console.log(notification);
+    });
   },
   methods: {
     stenForBroadcast: function stenForBroadcast() {
@@ -59059,7 +59062,7 @@ if (token) {
 if (typeof io !== 'undefined') {
   window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
     broadcaster: 'socket.io',
-    host: window.location.hostname + ':6001'
+    host: '1270.0.0.1:6001'
   });
 }
 

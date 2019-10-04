@@ -18,6 +18,11 @@
     export default {
         mounted() {
            this.stenForBroadcast();
+            Echo.private('test-channel')
+                .notification((notification) => {
+                    console.log(notification);
+                    
+            });
         },
         methods: {
             stenForBroadcast() {

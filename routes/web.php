@@ -1,4 +1,5 @@
 <?php
+use App\Events\UserSignedUp;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/pod', 'PodcastController@store');
+Route::get('/pod', function(){
+    event(new UserSignedUp('john doe'));
+    return view('welcome');
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

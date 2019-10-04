@@ -59,6 +59,6 @@ if (token) {
 if (typeof io !== 'undefined') {
     window.Echo = new Echo({
       broadcaster: 'socket.io',
-      host: window.location.hostname + ':6001',
+      host: '1270.0.0.1:6001',
     });
   }

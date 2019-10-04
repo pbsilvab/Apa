@@ -7,6 +7,7 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use App\User;
+use Notifications\Messages\BroadcastMessage;
 
 class NewMessage extends Notification
 {
@@ -31,7 +32,7 @@ class NewMessage extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['mail', 'database'];
     }
 
     /**
@@ -60,10 +61,20 @@ class NewMessage extends Notification
      * @param  mixed  $notifiable
      * @return array
      */
-    public function toArray($notifiable)
+    public function toBroadcast($notifiable)
     {
-        return [
-            //
-        ];
+       // dd($notification);
+        //$message = $this->getData($notifiable, $notification);
+
+        $event = new BroadcastNotificationCreated(
+            $notifiable, 1, ['s'=>'s', 'msj'=>'msj']
+        );
+
+        if ($message instanceof BroadcastMessage) {
+            $event->onConnection($message->connection)
+                ->onQueue($message->queue);
+        }
+
+        return $this->events->dispatch($event);
     }
 }
